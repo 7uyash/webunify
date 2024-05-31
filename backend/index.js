@@ -1,8 +1,11 @@
 import cookieParser from "cookie-parser";
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
+
 import databaseConnection from "./config/database.js";
 import userRoute from "./routes/userRoute.js";
+import tweetRoute from "./routes/tweetRoute.js";
 
 
 dotenv.config({
@@ -15,19 +18,22 @@ const app = express();
 
 
 app.use(express.urlencoded({
-    extends: true
+    extended: true
 }));
 app.use(express.json());
 app.use(cookieParser());
 
-
+const corsOptions = {
+    origin:"http://localhost:3000",
+    credentials:true
+}
+app.use(cors(corsOptions));
 
 app.use("/api/v1/user/", userRoute);
-app.get("/home", (req,res)=>{
-    req.status(200).json({
-        message:"coming from backend..."
-    })
-})
+app.use("/api/v1/tweet/", tweetRoute);
+
+
+
 
 
 

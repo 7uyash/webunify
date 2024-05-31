@@ -1,0 +1,34 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1687967377735,
+      "tag": "0000_dazzling_adam_warlock",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1687967435759,
+      "tag": "0001_reflective_doctor_strange",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1689789042694,
+      "tag": "0002_foamy_thundra",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1692559154797,
+      "tag": "0003_strange_kingpin",
+      "breakpoints": true
+    }
+  ]
+}
